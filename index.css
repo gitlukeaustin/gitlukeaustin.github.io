@@ -26,6 +26,10 @@
     background-color: #FFFFFF; /* 66C7F4 */
 }
 
+.nav a{
+    cursor:pointer;
+}
+
 .header {
     font-style: white;
     min-height: 20px;

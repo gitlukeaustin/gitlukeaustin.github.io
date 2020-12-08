@@ -16,62 +16,15 @@
                 <h1>Luke Austin</h1> 
             </div>
             <div class="nav">
-                <a v-on:click="toggleView">List View</a> | <a v-on:click="changeColors">Change Color Palette</a>
+                <a v-on:click="toggleView">{{ viewText }}</a> | <a v-on:click="changeColors">Change Color Palette</a>
             </div>
-            <div class="content">
-                <div class="card">  
-                    <h2>Honshu, 2018</h2>
-                    <div>
-                        Written in C, using glib
-                        <a href="https://gitlab.com/jonath20e/Honshu">source code</a>
-                    </div>
-                </div>
-                <div class="card">  
-                    <h2>Card game, 2019</h2>
-                    <div>
-                        Written in JavaScript, using VueJS
-                        <a href="/">source code</a>
-                        <a href="/">playable demo</a>
-                    </div>
-                </div>
-                <div class="card">  
-                    <h2>Biome, 2019</h2>
-                    <div>
-                        Written in C#, using Unity
-                        <a href="https://gitlab.com/Atchoom/biome">source code</a>
-                    </div>
-                </div>
-                <div class="card">  
-                    <h2>Snake, 2015</h2>
-                    <div>
-                        Written in C
-                        <a href="/">source code</a>
-                        <a href="/">playable demo</a>
-                    </div>
-                </div>
-                <div class="card">  
-                    <h2>Sudoku, 2016</h2>
-                    <div>
-                        Written in Java
-                        <a href="/">source code</a>
-                        <a href="/">playable demo</a>
-                    </div>
-                </div>
-                <div class="card">  
-                    <h2>Labyrinth, 2019</h2>
-                    <div>
-                        Written in OCaml
-                        <a href="https://github.com/gitlukeaustin/caml">source code</a>
-                    </div>
-                </div>
-                <div class="card">  
-                    <h2>GLAS, 2019</h2>
-                    <div>
-                        A sound wavelength viewer
-                        Written in Java
-                        <a href="https://github.com/gitlukeaustin/GLAS">source code</a>
-                    </div>
-                </div>
+            <div class="content" id="cardholder">
+                <v-card
+                    v-for="item in projects"
+                    v-bind:d="item"
+                    v-bind:key="item.id"
+                    ></v-card>
+               
             </div>
         </div>
         
