@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+ <meta charset = "UTF-8">
+ <title>externalStyle.html</title>
+ <link rel = "stylesheet" type = "text/css" href = "index.css" />
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+   <script src="index.js"></script>
+ </head>
+    <body class="container">
+        <div id="app" class="column" >
+            
+            <div class="header">
+                <h1>Luke Austin</h1> 
+            </div>
+            <div class="nav">
+                <a v-on:click="toggleView">List View</a> | <a v-on:click="changeColors">Change Color Palette</a>
+            </div>
+            <div class="content">
+                <div class="card">  
+                    <h2>Honshu, 2018</h2>
+                    <div>
+                        Written in C, using glib
+                        <a href="https://gitlab.com/jonath20e/Honshu">source code</a>
+                    </div>
+                </div>
+                <div class="card">  
+                    <h2>Card game, 2019</h2>
+                    <div>
+                        Written in JavaScript, using VueJS
+                        <a href="/">source code</a>
+                        <a href="/">playable demo</a>
+                    </div>
+                </div>
+                <div class="card">  
+                    <h2>Biome, 2019</h2>
+                    <div>
+                        Written in C#, using Unity
+                        <a href="https://gitlab.com/Atchoom/biome">source code</a>
+                    </div>
+                </div>
+                <div class="card">  
+                    <h2>Snake, 2015</h2>
+                    <div>
+                        Written in C
+                        <a href="/">source code</a>
+                        <a href="/">playable demo</a>
+                    </div>
+                </div>
+                <div class="card">  
+                    <h2>Sudoku, 2016</h2>
+                    <div>
+                        Written in Java
+                        <a href="/">source code</a>
+                        <a href="/">playable demo</a>
+                    </div>
+                </div>
+                <div class="card">  
+                    <h2>Labyrinth, 2019</h2>
+                    <div>
+                        Written in OCaml
+                        <a href="https://github.com/gitlukeaustin/caml">source code</a>
+                    </div>
+                </div>
+                <div class="card">  
+                    <h2>GLAS, 2019</h2>
+                    <div>
+                        A sound wavelength viewer
+                        Written in Java
+                        <a href="https://github.com/gitlukeaustin/GLAS">source code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+   
+</html>
