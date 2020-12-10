@@ -1,0 +1,14 @@
+<div *ngIf="project">
+
+    <h2>{{project.title | uppercase}}, {{project.year}}</h2>
+    <div>{{project.description}}, {{project.language}}</div>
+    <div>{{project.code}}</div>
+    <div>{{project.demo}}</div>
+
+    <div>
+        <label>Change the title!
+            <input [(ngModel)]="project.title" placeholder="title"/>
+        </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+</div>

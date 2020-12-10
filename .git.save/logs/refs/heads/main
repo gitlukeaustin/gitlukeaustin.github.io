@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 30a5d45f3628e48d196909d9b55573ba7155f58b Luke Austin <Luke@lukes-macbook-pro.home> 1606946088 +0100	clone: from https://github.com/gitlukeaustin/gitlukeaustin.github.io
+30a5d45f3628e48d196909d9b55573ba7155f58b cf5044af9f3cf233f50bde392857847be2d98736 Luke Austin <Luke@lukes-macbook-pro.home> 1606946153 +0100	commit: initial commit
+cf5044af9f3cf233f50bde392857847be2d98736 505ee61eb1aa61049be7e2a2d871d5f0fbb3c453 Luke Austin <Luke@lukes-macbook-pro.home> 1606946257 +0100	commit: second commit
+505ee61eb1aa61049be7e2a2d871d5f0fbb3c453 0875031a974c595b09dcbe619d01d1141fa116cd Luke Austin <Luke@lukes-macbook-pro.home> 1607210917 +0100	commit: adding stuff
+0875031a974c595b09dcbe619d01d1141fa116cd 5bf66a975e2ad8dae2e52a5ce301cc97cda5afa6 Luke Austin <Luke@lukes-macbook-pro.home> 1607345915 +0100	commit: adding this stuff?
+5bf66a975e2ad8dae2e52a5ce301cc97cda5afa6 60bdab9830aab6bc7d2e32f69fde33282d72493b Luke Austin <Luke@lukes-macbook-pro.home> 1607376814 +0100	commit: will augurv2 work
+60bdab9830aab6bc7d2e32f69fde33282d72493b a3fa9fbcf1954e282f1bc7a23902e0d1aa6ad917 Luke Austin <Luke@lukes-macbook-pro.home> 1607430975 +0100	commit: resolving to make a simple vuejs website instead
+a3fa9fbcf1954e282f1bc7a23902e0d1aa6ad917 e02ad93c3bf15543b0a547eb2daf2caba9b82ff0 Luke Austin <Luke@lukes-macbook-pro.home> 1607442694 +0100	commit: added vue component templates
+e02ad93c3bf15543b0a547eb2daf2caba9b82ff0 9f478a7c904723fac60851b71577e43c2ca4dbd4 Luke Austin <Luke@lukes-macbook-pro.home> 1607597260 +0100	commit: cleaning main branch.
