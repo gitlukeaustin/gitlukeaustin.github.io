@@ -6,7 +6,7 @@ window.onload = function () {
         props:['d'],
         template: `
             <div class="card">  
-                <h2> {{ d.title }}</h2>
+                <h2> {{ d.title }}, {{ d.year }}</h2>
                 <div>
                     {{ d.description}} <br> {{ d.language }}
                     <a v-if="d.code !== null" :href="d.code">source code</a>
@@ -20,8 +20,8 @@ window.onload = function () {
         data: {
             cardView: true,
             projects: [
-                {id: 0, title: "Honshu", year: "2018", description: "A traditional tile based card game", language: "Written in C using glib", code:"https://gitlab.com/jonath20e/Honshu", demo:null},
-                {id: 1, title: "Biome", year: "2019", description: "A fully 3d action roguelike", language: "Written in C# using unity", code:"https://gitlab.com/Atchoom/biome", demo:null},
+                {id: 0, title: "Honshu", year: "2018", description: "A traditional tile based card game", language: "Written in C using OpenGL", code:"https://gitlab.com/jonath20e/Honshu", demo:null},
+                {id: 1, title: "Biome", year: "2019", description: "A fully 3d action roguelike", language: "Written in C# using Unity", code:"https://gitlab.com/Atchoom/biome", demo:null},
                 {id: 2, title: "Card Game", year: "2019", description: "An original web basaed card game", language: "Written in JavaScript using VueJS", code:"", demo:null},
                 {id: 3, title: "Snake", year: "2015", description: "The classic snake game", language: "Written in C", code:null, demo:null},
                 {id: 4, title: "Sudoku", year: "2016", description: "Sudoku.", language: "Written in Java", code:null, demo:null},
