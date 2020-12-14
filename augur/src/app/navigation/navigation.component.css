@@ -1,0 +1,17 @@
+.view-icon, .dark-icon {
+  cursor: pointer;
+  min-height:10px;
+  margin: 5px;
+}
+
+.view-icon {
+    background: no-repeat url("src/assets/view.png");
+    padding-left:20px;
+}
+
+.dark-icon {
+  background: no-repeat url("src/assets/dark.png");
+  padding-left:27px;
+}
+
+

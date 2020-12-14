@@ -6,4 +6,7 @@ export interface Project {
     description: string;
     year: number;
     language: string;
+    image: string;
+    tool: string;
+    details: string;
 }

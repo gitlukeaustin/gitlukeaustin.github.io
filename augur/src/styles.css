@@ -1,23 +1,164 @@
 /* You can add global styles to this file, and also import other style files */
 /* Application-wide Styles */
 h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-  }
-  h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
-  body {
-    margin: 2em;
-  }
-  body, input[type="text"], button {
-    color: #333;
-    font-family: Cambria, Georgia;
-  }
-  /* everywhere else */
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body, input[type="text"], button {
+  
+  font-family: Cambria, Georgia;
+  margin: 0px;
+  height:100%; 
+}
+.dark  {
+  background-color: #405061;
+}
+
+#style-controle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  margin: 40px 160px;
+}
+
+/* ---- Light / Dark toggle ---- */
+.light h2, h3 {
+  color: #444;
+}
+.light {
+  background-color: #DDD;
+  color: #333;
+}
+.light #projects li, .light .clickable {
+    background-color:#405061;
+    color: #eee;
+}
+.light #projects li:hover, .light .clickable:hover {
+  color: #607D8B;
+  background-color: #DDD;
+}
+.light #projects li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+.light #projects li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.light .view-icon {
+  color:white;
+}
+.light a {
+  color: white;
+}
+
+
+
+h2, h3 {
+    color: #DDD;
+}
+.dark  {
+  background-color: #333;
+  color: #DDD;
+}
+#projects li, .clickable {
+  background-color:#bbb;
+  color: #405061;
+}
+#projects li:hover, .clickable:hover {
+  color: #607D8B;
+  background-color: #DDD;
+}
+#projects li.selected {
+  background-color: #405061;
+  color: white;
+}
+#projects li.selected:hover {
+  background-color: #405061;
+  color: white;
+}
+.view-icon {
+  color:#405061;
+}
+a {
+  color: #405061;
+}
+  
+
+/* left is the list icon */
+#style-controle.card .view-icon{
+  background-position: left; 
+  transition-property: background-position;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+#style-controle.list .view-icon{
+  background-position: right;
+  transition-property: background-position;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+
+
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+#style-controle.light .dark-icon{
+  background-position: left; 
+  transition-property: background-position;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  border-radius: 3px 12px 12px 3px;
+}
+
+#style-controle.dark .dark-icon{
+  background-position: right;
+  transition-property: background-position;
+  border-radius: 8px 3px 3px 8px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+
+/* ---- card / list toggle ---- */
+#style-controle.list .title {
+  margin: 0px 10px 0px 4px;
+}
+#style-controle.card .title {
+  margin: 4px 4px 30px 4px;
+}
+#style-controle.card #projects  li {
+  width: 160px;
+  text-align: center;
+  flex-direction: column;
+  padding: 0.9em 0.8em 0.9em 0.8em;
+}
+
+#style-controle.list #projects  li {
+  padding: 0.8em 0.7em 0.8em 0.7em;
+  flex-direction: row;
+}
+
+#style-controle.list #projects{
+  flex-direction: column;
+  width: 100%;
+}
+
+#style-controle.card #projects {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+}

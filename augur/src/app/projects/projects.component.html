@@ -1,8 +1,10 @@
-<h2>My Projects</h2>
-<ul class="projects">
-  <li *ngFor = "let project of projects">
-    <a routerLink="/detail/{{project.id}}">
-        <span class="badge">{{project.title}}</span> {{project.description}}
-    </a>
-  </li>
-</ul>
+<div class="container">
+  
+  <ul id="projects">
+    <li *ngFor = "let project of projects" routerLink="/detail/{{project.id}}">
+          <div class="title"><strong>{{project.title}}</strong></div> 
+          <div> {{project.description}}, written in {{project.language}}</div>
+    </li>
+  </ul>
+
+</div>

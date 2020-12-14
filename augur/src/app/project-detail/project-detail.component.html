@@ -1,14 +1,26 @@
-<div *ngIf="project">
+<div class="container">
 
-    <h2>{{project.title | uppercase}}, {{project.year}}</h2>
-    <div>{{project.description}}, {{project.language}}</div>
-    <div>{{project.code}}</div>
-    <div>{{project.demo}}</div>
+    <div class="column" *ngIf="project">
+        <span class="clickable" (click)="goBack()"> Back </span>
+    
+        <h2>{{project.title | uppercase}}, {{project.year}}</h2>
+        
+        <div class="row">
+            <div class="description">
 
-    <div>
-        <label>Change the title!
-            <input [(ngModel)]="project.title" placeholder="title"/>
-        </label>
+                <div>
+                    {{project.description}}, written in {{project.language}} 
+                    <span *ngIf="project.tool.length > 0">using {{project.tool}}</span>.
+                </div>
+                <div>{{project.details}}</div>
+                <div *ngIf="project.code.length > 0"><a class="clickable" href="{{project.code}}">Github repository</a></div>
+                <div *ngIf="project.demo.length > 0"><a class="clickable" href="{{project.demo}">Demo</a></div>
+            </div>
+            <div class="image">
+                <img src="{{project.image}}" alt="{{project.image}}">
+            </div>
+        </div>
+        
     </div>
-    <button (click)="goBack()">go back</button>
+
 </div>

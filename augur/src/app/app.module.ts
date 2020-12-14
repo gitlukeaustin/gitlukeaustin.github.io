@@ -4,19 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // <-- NgModel is here?
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 
 import { HttpClientModule } from '@angular/common/http';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     ProjectDetailComponent,
-    DashboardComponent
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
