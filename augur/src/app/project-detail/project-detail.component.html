@@ -5,7 +5,7 @@
     
         <h2>{{project.title | uppercase}}, {{project.year}}</h2>
         
-        <div class="row">
+        <div class="details">
             <div class="description">
 
                 <div>
@@ -17,7 +17,7 @@
                 <div *ngIf="project.demo.length > 0"><a class="clickable" href="{{project.demo}">Demo</a></div>
             </div>
             <div class="image">
-                <img src="{{project.image}}" alt="{{project.image}}">
+                <img class="image" src="{{project.image}}" alt="{{project.image}}">
             </div>
         </div>
         
