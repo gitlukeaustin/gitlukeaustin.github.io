@@ -18,6 +18,9 @@ export class ProjectDetailComponent implements OnInit {
     private location: Location
     ) { }
 
+  
+  imageDirectory = "./assets/images/";
+
   ngOnInit(): void {
     this.getProject();
   }

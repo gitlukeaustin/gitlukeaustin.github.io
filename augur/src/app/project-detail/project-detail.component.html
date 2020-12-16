@@ -13,11 +13,16 @@
                     <span *ngIf="project.tool.length > 0">using {{project.tool}}</span>.
                 </div>
                 <div>{{project.details}}</div>
-                <div *ngIf="project.code.length > 0"><a class="clickable" href="{{project.code}}">Github repository</a></div>
-                <div *ngIf="project.demo.length > 0"><a class="clickable" href="{{project.demo}">Demo</a></div>
+                <div *ngIf="project.code.length > 0">Github repository: <a href="{{project.code}}">{{project.code}}</a></div>
+                <div *ngIf="project.demo.length > 0">Demo: <a href="{{project.demo}">{{project.demo}}</a></div>
             </div>
-            <div class="image">
-                <img class="image" src="{{project.image}}" alt="{{project.image}}">
+            <div *ngIf="project.image.length > 0" class="image">
+                
+                <picture>
+                    <source media="(max-width: 799px)" srcset="{{imageDirectory}}small/{{project.image}}">
+                    <source media="(min-width: 800px)" srcset="{{imageDirectory}}{{project.image}}">
+                    <img class="image" src="{{imageDirectory}}{{project.image}}" alt="{{project.image}}">
+                </picture>
             </div>
         </div>
         
