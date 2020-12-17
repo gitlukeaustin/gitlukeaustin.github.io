@@ -13,13 +13,12 @@
 .description{
   display: flex;
   flex-direction: column;
-  flex: 0 1 auto;
   margin: 4px 10px 4px 0px;
   text-align: justify;
 }
 
 .image {
-  flex: 0 2 auto;
+  object-fit:contain;
 }
 
 .description > div {
