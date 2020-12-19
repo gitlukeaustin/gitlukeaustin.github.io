@@ -33,7 +33,7 @@ export const PROJECTS : Project[] = [
     },
     {
         id: 6, year: 2018, description: "A 2 player web based card game", 
-        title: "FFE", code: "", demo: "", language: "Javascipt", tool: "VueJS",
+        title: "FFE", code: "https://github.com/gitlukeaustin/ffe", demo: "", language: "Javascipt", tool: "VueJS",
         image: "ffe.png",
         details: "Made with 3 other students for a web programming class, the idea was to create a site where players could log in and play a simple card game with another user."
     },
