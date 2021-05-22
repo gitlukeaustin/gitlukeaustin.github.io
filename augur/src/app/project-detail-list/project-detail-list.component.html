@@ -1,0 +1,30 @@
+<div *ngFor = "let project of projects" class="container">
+
+    <div class="column" *ngIf="project">
+
+    
+        <h2>{{project.title | uppercase}}<span *ngIf="project.year">,</span> {{project.year}}</h2>
+        
+        <div class="details">
+            <div class="description">
+
+                <div  *ngIf="project.description">
+                    {{project.description}}, {{written}} {{project.language}}<span *ngIf="project.tool"> {{using}}  {{project.tool}}</span>.
+                </div>
+                <div [innerHTML]="project.details"></div>
+                <div *ngIf="project.code">Github repository: <a href="{{project.code}}">{{project.code}}</a></div>
+                <div *ngIf="project.demo">Demo: <a href="{{project.demo}}">{{project.demo}}</a></div>
+            </div>
+            <div *ngIf="project.image" class="image">
+                
+                <picture>
+                    <source media="(max-width: 799px)" srcset="{{imageDirectory}}small/{{project.image}}">
+                    <source media="(min-width: 800px)" srcset="{{imageDirectory}}{{project.image}}">
+                    <img class="image" src="{{imageDirectory}}{{project.image}}" alt="{{project.image}}">
+                </picture>
+            </div>
+        </div>
+        
+    </div>
+
+</div>

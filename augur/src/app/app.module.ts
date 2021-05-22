@@ -10,13 +10,17 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
+import { CvComponent } from './cv/cv.component';
+import { ProjectDetailListComponent } from './project-detail-list/project-detail-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     ProjectDetailComponent,
-    NavigationComponent
+    NavigationComponent,
+    CvComponent,
+    ProjectDetailListComponent
   ],
   imports: [
     BrowserModule,

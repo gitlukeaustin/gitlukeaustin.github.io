@@ -29,8 +29,11 @@ export class ProjectDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.projectService.getProject(id)
       .subscribe(project => this.project = project);
+    
+  
   }
 
+  
   goBack(): void {
     this.location.back();
   }

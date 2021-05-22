@@ -1,4 +1,4 @@
-.view-icon, .dark-icon {
+.view-icon, .dark-icon, .language-icon {
   cursor: pointer;
   min-height:10px;
   margin: 5px;
@@ -12,6 +12,11 @@
 .dark-icon {
   background: no-repeat url("src/assets/dark.png");
   padding-left:27px;
+}
+
+.language-icon {
+  background: no-repeat url("src/assets/language.png");
+  padding-left:20px;
 }
 
 

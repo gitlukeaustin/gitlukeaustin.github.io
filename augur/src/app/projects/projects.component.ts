@@ -12,6 +12,8 @@ export class ProjectsComponent implements OnInit {
 
   projects: Project[];
 
+
+
   constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
