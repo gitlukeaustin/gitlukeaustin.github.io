@@ -88,7 +88,7 @@ export const PROJECTS : Project[] = [
     {
         id: 8, year: 2018, description: "A 2 player web based card game", 
         title: "FFE", code: "https://github.com/gitlukeaustin/ffe", language: "Javascipt", tool: "VueJS",
-        image: "ffe.png",
+        image: "ffe.png", demo: "https://codepen.io/lukeaustin/pen/BaWLqJK",
         details: "Made with 3 other students for a web programming class, the idea was to create a site where players could log in and play a simple card game with another user.",
         english:true
     },
@@ -193,7 +193,7 @@ export const PROJECTS : Project[] = [
     {
         id: 108, year: 2018, description: "Un jeu de carte à 2 joueurs", 
         title: "FFE", code: "https://github.com/gitlukeaustin/ffe", language: "Javascipt", tool: "VueJS",
-        image: "ffe.png",
+        image: "ffe.png", demo:"https://codepen.io/lukeaustin/pen/BaWLqJK",
         details: "Réalisé avec 3 autres étudiants pour un cours de programmation Web, l'idée était de créer un site où les joueurs pouvaient se connecter et jouer à un simple jeu de cartes avec un autre utilisateur.",
         english: false
     },
