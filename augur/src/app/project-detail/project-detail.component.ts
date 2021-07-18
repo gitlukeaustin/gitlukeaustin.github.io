@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Project } from '../project';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { ProjectService } from '../project.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -11,10 +10,10 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./project-detail.component.css']
 })
 export class ProjectDetailComponent implements OnInit {
-  @Input() project: Project;
+  @Input() project;
 
   constructor(private route: ActivatedRoute,
-    private projectService: ProjectService,
+    private projectService: DataService,
     private location: Location
     ) { }
 

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Project } from '../project';
 
-import { ProjectService } from '../project.service';
+import { DataService } from '../data.service';
 import { NavigationService } from '../navigation.service';
 import { Subscription } from 'rxjs';
 
@@ -12,27 +11,14 @@ import { Subscription } from 'rxjs';
 })
 export class ProjectDetailListComponent implements OnInit {
 
-  projects: Project[];
+  projects = null;
 
   imageDirectory = "./assets/images/";
 
-  subscription : Subscription;
 
-  toggleEnglish = true;
+  @Input() toggleEnglish: boolean;
 
-  using = "using";
-
-  written = "written in";
-
-  constructor(private projectService: ProjectService, private navigationService: NavigationService) { 
-    
-      this.subscription = navigationService.skipClicked.subscribe( value => {
-        if (value === true) {
-            console.log("!"); 
-            this.updateLanguage();
-        }
-    });
-
+  constructor(private dataService: DataService) { 
   }
 
   ngOnInit(): void {
@@ -40,21 +26,8 @@ export class ProjectDetailListComponent implements OnInit {
   }
 
   getProjects(): void {
-    this.projectService.getProjects().subscribe(projects => this.projects = projects.sort((x,y) =>  x.id - y.id).filter(x=>x.english==this.toggleEnglish));
+    this.dataService.getProjects().subscribe(projects => this.projects = projects);
   }
 
-  updateLanguage(){
-    this.toggleEnglish = !this.toggleEnglish;
-    if(this.toggleEnglish){
-      this.using = "using";
-
-      this.written = "written in";
-    } else {
-      this.using = "avec";
-
-      this.written = "écrit en";
-    }
-    this.getProjects();
-  }
 
 }

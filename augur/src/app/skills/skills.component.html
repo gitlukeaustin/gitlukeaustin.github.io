@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="skill" *ngFor="let skill of skills.data">
+            <span>{{skill.text}}</span>
+            <span>
+                <span *ngFor="let i of skill.stars | arrayPipe">
+                    &#x2605;
+                </span>
+
+            </span>
+        </div>
+    </div>
+</div>

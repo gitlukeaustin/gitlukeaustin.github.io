@@ -1,0 +1,19 @@
+
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    background-color:#007BA7;
+    justify-content: space-between;
+    transition:opacity ease-in-out 1s;
+    opacity:0.8;
+    width: 20%;
+    align-items:space-evenly;
+    padding:4px 8px;
+    margin:4px;
+}
+
+.skill:hover {
+    transition: opacity ease-in-out 0.5s;
+    opacity: 1;
+}

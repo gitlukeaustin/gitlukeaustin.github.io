@@ -1,17 +1,18 @@
-<div *ngFor = "let project of projects" class="container">
+<div *ngFor="let project of projects.data" class="container">
 
-    <div class="column" *ngIf="project">
-
-    
-        <h2>{{project.title | uppercase}}<span *ngIf="project.year">,</span> {{project.year}}</h2>
+    <div class="column" *ngIf="project">    
+        <h2>{{project.year}} <span *ngIf="project.year">| </span>{{project.title | uppercase}}</h2>
         
         <div class="details">
             <div class="description">
-
-                <div  *ngIf="project.description">
-                    {{project.description}}, {{written}} {{project.language}}<span *ngIf="project.tool"> {{using}}  {{project.tool}}</span>.
+                <div>
+                    {{toggleEnglish ? project.english.description : project.french.description}}
                 </div>
-                <div [innerHTML]="project.details"></div>
+                <div>{{toggleEnglish ? project.english.details : project.french.details}}</div>
+                <span *ngIf="project.language"> {{toggleEnglish?'Writtent in':'Écrit en'}} {{project.language}}<span *ngIf="project.tool"> {{toggleEnglish?'with':'avec'}} {{project.tool}}</span>
+                </span>
+
+                
                 <div *ngIf="project.code">Github repository: <a href="{{project.code}}">{{project.code}}</a></div>
                 <div *ngIf="project.demo">Demo: <a href="{{project.demo}}">{{project.demo}}</a></div>
             </div>

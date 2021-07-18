@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectsComponent } from './projects/projects.component';
+import { MainComponent } from './main/main.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { CvComponent } from './cv/cv.component';
 
 
 const routes: Routes = [
-  { path: 'projects', component: ProjectsComponent },
+  { path: 'main', component: MainComponent },
   { path: 'detail/:id', component: ProjectDetailComponent },
-  { path: 'cv', component: CvComponent },
-  { path: '', redirectTo: 'projects', pathMatch: 'full' }
+  { path: '', redirectTo: 'main', pathMatch: 'full' }
 ];
 
 

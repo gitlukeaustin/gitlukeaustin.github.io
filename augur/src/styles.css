@@ -15,6 +15,14 @@ body, input[type="text"], button {
   height:100%; 
 }
 
+body {
+  background-color:#333;
+}
+
+body.light {
+  background-color:#DDD;
+}
+
 /* .dark  {
   background-color: #405061;
 } */
@@ -41,6 +49,7 @@ body, input[type="text"], button {
 
 @media (min-width: 800px) { 
   .container {
+    max-width:1200px;
     margin: 40px 160px;
   }
 }
@@ -93,7 +102,7 @@ h5 {
   color:white;
 }
 .light a {
-  color: white;
+  color: black;
 }
 
 #style-controle.dark:before  {
@@ -122,8 +131,10 @@ h5 {
   color:#405061;
 }
 a {
-  color: #405061;
+  text-decoration: none;
+  color: white;
 }
+
   
 
 /* left is the list icon */
@@ -141,8 +152,17 @@ a {
   transition-timing-function: ease-in-out;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
 
-
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 /* everywhere else */
 * {
@@ -180,8 +200,6 @@ a {
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
-
-
 
 /* ---- card / list toggle ---- */
 #style-controle.list .title {

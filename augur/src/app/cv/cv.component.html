@@ -1,77 +1,22 @@
+<h2 class="container">EXPERIENCE</h2>
+<div *ngFor = "let work of works.data" class="container">
 
-<div class="container">
-    <div id="left">
-        <div id="title_group">
-            <h1>Luke Austin</h1>  
-            <!--<h2 id="banner" >{{bannerText}}</h2>-->
-
-        </div>
-        <!--<div class="section">
-            <h3>Expériences</h3>
-            <div>
-                <h4>Apprenti Ingénieur</h4>
-                <h5>2017 - 2020 | GE Grid Solutions, Massy</h5>
-                <ul>
-                    <li>Création de tableaux de bord pour un logiciel de gestion des marchés électriques Scandinaves avec AngularJS, JavaScript, C#/.NET, SQL Server, HTML/CSS</li>
-                    <li>Écriture de tests techniques avec Ranorex</li>
-                    <li>Rédaction de documentation technique</li>
-                    <li>Travail Collaboratif avec une équipe Agile</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Apprenti Développeur</h4>
-                <h5>2016 - 2017 | Rectorat de L’académie de Versailles, Versailles</h5>
-                <ul>
-                    <li>Création de sites web dynamiques pour modifier les serveurs du DSI avec PHP, JavaScript, jQuery, HTML/CSS, Ajax</li>
-                    <li>Mise à jour complet du CSS d’un site web pédagogique (WIMS)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Education</h3>
-            <div>
-                <h4>Diplôme d’Ingénieur Spécialité Informatique option JIN (Jeux Vidéo et Intéractions Numériques)</h4>
-                <h5>2017 - 2020 |  ENSIIE, Evry</h5>
-            </div>
-            <div>
-                <h4>DUT Informatique</h4>
-                <h5>2015 - 2017 | IUT Sénart Fontainebleau, Fontainebleau</h5>
-            </div>
-            <div>
-                <h4>Bachelor of Arts in Film and Media Studies (Bac +3)</h4>
-                <h5>2013 - 2015 | University of Kansas, Lawrence Kansas</h5>
-            </div>
-        </div>-->
+    <div class="column">    
+        <h3>{{toggleEnglish? work.english.position : work.french.position}}</h3>
+        <div>{{work.start}} - {{work.end}} | {{work.location}}</div>
+        <ul>
+            <li *ngFor="let detail of (toggleEnglish?work.english.details:work.french.details)">{{detail}}</li>
+        </ul>
     </div>
-    
-    
-    <div id="right">
-        <div id="contact_info">
-            <div>Essonne</div>
-            <div><a href="linkedin.com/in/lnlukeaustin">linkedin.com/in/lnlukeaustin</a></div>
-        </div>
-        <!--<div class="section">
-            <h3>Compétences</h3>
 
-            <div>C, C#, JavaScript, SQL, PHP</div>
-            <div>Git, SVN, Ranorex, Powershell, TeamCity, Postman</div>
-            <div>XML, HTML, CSS, JSON, UML</div>
-            <div>AngularJS, VueJs, jQuery</div>
-            <div>Assembleur, R, Scala, OCaml</div>
-            <div>C++, Python, Bash, Java</div>
-            <div>Word, Excel, PowerPoint</div>
-            <div>OSX, Linux, Windows</div>
-            <div>Persévérant, Autonome, Multiculturel</div>
-        </div>
+</div>
 
-        <div class="section">
-            <h3>Centres d'Intêret</h3>
-            <div>Animation (Gimp, Blender)</div>
-            <div>Développement de Jeux Vidéo (Unity) </div>
-            <div>Production Vidéo (Final Cut)</div>
-            <div>Composition Musical (Audacity, Garageband)</div>
+<h2 class="container">EDUCATION</h2>
+<div *ngFor = "let school of schools.data" class="container">
 
-        </div>-->
+    <div class="column">    
+        <h3>{{toggleEnglish? school.english.degree : school.french.degree}}</h3>
+        <div>{{school.start}} - {{school.end}} | {{school.location}}</div>
     </div>
+
 </div>
